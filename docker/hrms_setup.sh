@@ -1,4 +1,6 @@
-#!bin/bash
+#!/bin/bash
+
+cd /home/frappe/frappe-bench
 
 bench new-site hrms.localhost \
 --force \
