@@ -8,7 +8,7 @@ services:
       - --skip-character-set-client-handshake
       - --skip-innodb-read-only-compressed # Temporary fix for MariaDB 10.6
     environment:
-      MYSQL_ROOT_PASSWORD: 123
+      MYSQL_ROOT_PASSWORD: 101medialab
     volumes:
       - mariadb-data:/var/lib/mysql
 
@@ -17,15 +17,12 @@ services:
 
   frappe:
     build: .
-    environment:
-      - SHELL=/bin/bash
-    working_dir: /home/frappe
     volumes:
       - .:/workspace
     ports:
       - 8000:8000
       - 9000:9000
-    command: bash /workspace/hrms_setup.sh
+    entrypoint: [ "/bin/bash", "/workspace/erpnext_hrms_start.sh" ]
 
 volumes:
   mariadb-data:
