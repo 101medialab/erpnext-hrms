@@ -1,4 +1,4 @@
-FROM frappe/bench:latest
+FROM frappe/bench:v5.24.1
 
 ENV SHELL=/bin/bash
 
@@ -12,11 +12,4 @@ RUN bench init --skip-redis-config-generation frappe-bench
 
 WORKDIR /home/frappe/frappe-bench
 
-RUN bench set-redis-cache-host redis:6379 && bench set-redis-queue-host redis:6379 && bench set-redis-socketio-host redis:6379
-
-RUN sed -i '/redis/d' ./Procfile && sed -i '/watch/d' ./Procfile
-
 RUN bench get-app erpnext && bench get-app hrms
-
-# Not used. Converted into RUN commands.
-#RUN bash /workspace/init.sh
