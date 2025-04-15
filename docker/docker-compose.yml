@@ -23,6 +23,13 @@ services:
 
   frappe:
     build: .
+    environment:
+      - SITE_NAME=${SITE_NAME}
+      - REDIS_HOST=${REDIS_HOST}
+      - DB_NAME=${DB_NAME}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - INTERMEDIATE_DB_USERNAME=${INTERMEDIATE_DB_USERNAME}
+      - INTERMEDIATE_DB_PASSWORD=${INTERMEDIATE_DB_PASSWORD}
     volumes:
       - .:/workspace
     ports:

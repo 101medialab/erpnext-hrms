@@ -2,26 +2,22 @@
 
 cd /home/frappe/frappe-bench
 
-site_name="erpnext-hrms.local"
-db_name="erpnext_hrms_local"
-redis_host="redis://redis:6379"
-
-if [ -d "/home/frappe/frappe-bench/sites/$site_name" ]; then
-    echo "$site_name already exists, skipping init"
-    bench use $site_name
+if [ -d "/home/frappe/frappe-bench/sites/$SITE_NAME" ]; then
+    echo "$SITE_NAME already exists, skipping init"
+    bench use $SITE_NAME
 else
-    echo "Initializing $site_name..."
+    echo "Initializing $SITE_NAME..."
     bench set-mariadb-host mariadb
-    bench set-redis-cache-host $redis_host
-    bench set-redis-queue-host $redis_host
-    bench set-redis-socketio-host $redis_host
+    bench set-redis-cache-host $REDIS_HOST
+    bench set-redis-queue-host $REDIS_HOST
+    bench set-redis-socketio-host $REDIS_HOST
 
     sed -i '/redis/d' ./Procfile
     sed -i '/watch/d' ./Procfile
 
-    bench new-site $site_name --db-name $db_name --db-password 101medialab --admin-password admin --db-root-password 101medialab
+    bench new-site $SITE_NAME --db-name $DB_NAME --db-password $DB_PASSWORD --db-root-username $INTERMEDIATE_DB_USERNAME --db-root-password $INTERMEDIATE_DB_PASSWORD --admin-password admin
 
-    bench use $site_name
+    bench use $SITE_NAME
 
     bench install-app hrms
     bench set-config developer_mode 1
