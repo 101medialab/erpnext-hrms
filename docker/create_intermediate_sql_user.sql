@@ -1,0 +1,3 @@
+CREATE USER 'intermediate'@'%' IDENTIFIED BY '101medialab';
+GRANT ALL PRIVILEGES ON *.* TO `intermediate`@`%` WITH GRANT OPTION;
+FLUSH PRIVILEGES;
