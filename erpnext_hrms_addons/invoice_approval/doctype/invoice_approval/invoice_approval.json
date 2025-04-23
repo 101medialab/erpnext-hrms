@@ -1,0 +1,27 @@
+{
+  "doctype": "DocType",
+  "name": "Invoice Approval",
+  "module": "Invoice Approval",
+  "fields": [
+    {
+      "fieldname": "title",
+      "label": "Title",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "description2",
+      "label": "Description2",
+      "fieldtype": "Text Editor"
+    },
+    {
+      "fieldname": "description3",
+      "label": "Description3",
+      "fieldtype": "Text Editor"
+    },
+    {
+      "fieldname": "is_active",
+      "label": "Is Active",
+      "fieldtype": "Check"
+    }
+  ]
+}
