@@ -1,7 +1,7 @@
 app_name = "erpnext_hrms_addons"
 app_title = "Hypebeast ERPNext-HRMS"
 app_publisher = "Hypebeast"
-app_description = "Hypebeast ERPNext-HRMS"
+app_description = "Description"
 app_email = "hypebeast@hypebeast.com"
 app_license = "mit"
 
@@ -11,15 +11,15 @@ app_license = "mit"
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page
-# add_to_apps_screen = [
-# 	{
-# 		"name": "erpnext_hrms_addons",
-# 		"logo": "/assets/erpnext_hrms_addons/logo.png",
-# 		"title": "Hypebeast ERPNext-HRMS",
-# 		"route": "/erpnext_hrms_addons",
-# 		"has_permission": "erpnext_hrms_addons.api.permission.has_app_permission"
-# 	}
-# ]
+add_to_apps_screen = [
+    {
+        "name": "erpnext_hrms_addons",
+        "logo": "/assets/erpnext_hrms_addons/logo.png",
+        "title": "Hypebeast ERPNext-HRMS",
+        "route": "/erpnext_hrms_addons",
+        # "has_permission": "erpnext_hrms_addons.api.permission.has_app_permission"
+    }
+]
 
 # Includes in <head>
 # ------------------
@@ -143,23 +143,23 @@ app_license = "mit"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"erpnext_hrms_addons.tasks.all"
-# 	],
-# 	"daily": [
-# 		"erpnext_hrms_addons.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"erpnext_hrms_addons.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"erpnext_hrms_addons.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"erpnext_hrms_addons.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+    "all": [
+        # "erpnext_hrms_addons.tasks.all"
+    ],
+    "daily": [
+        # "erpnext_hrms_addons.tasks.daily"
+    ],
+    "hourly": [
+        # "erpnext_hrms_addons.tasks.hourly"
+    ],
+    "weekly": [
+        # "erpnext_hrms_addons.tasks.weekly"
+    ],
+    "monthly": [
+        # "erpnext_hrms_addons.tasks.monthly"
+    ],
+}
 
 # Testing
 # -------
@@ -236,4 +236,3 @@ app_license = "mit"
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
-

@@ -31,3 +31,9 @@ Pre-commit is configured to use the following tools for checking and formatting 
 ### License
 
 mit
+
+bench install-app erpnext_hrms_addons
+
+bench remove-from-installed-apps erpnext_hrms_addons
+
+bench --site erpnext-hrms.local migrate

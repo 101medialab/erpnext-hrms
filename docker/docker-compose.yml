@@ -34,7 +34,7 @@ services:
       - MARIADB_ROOT_PASSWORD=${MARIADB_ROOT_PASSWORD}
     volumes:
       - .:/workspace
-      - ./../:/home/frappe/frappe-bench/apps/erpnext_hrms_addons
+#      - ./../:/home/frappe/frappe-bench/apps/erpnext_hrms_addons
     ports:
       - 8000:8000
       - 9000:9000
