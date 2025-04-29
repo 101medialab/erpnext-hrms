@@ -49,6 +49,8 @@ else
 
     bench install-app hrms
     bench set-config developer_mode 1
+    bench set-config restart_supervisor_on_update 1
+    bench set-config restart_systemd_on_update 1
     bench enable-scheduler
 fi
 
